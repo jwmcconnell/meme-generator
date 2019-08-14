@@ -39,6 +39,7 @@ class App extends React.Component {
   }
   
   render() {
+    const { topText, bottomText, imagePath, imageOption, imageUrl } = this.state;
     return (
       <section className={styles.App}>
         <section>
@@ -90,11 +91,11 @@ class App extends React.Component {
         </section>
 
         <Preview 
-          upload={this.state.imagePath} 
-          url={this.state.imageUrl} 
-          option={this.state.imageOption}
-          topText={this.state.topText}
-          bottomText={this.state.bottomText}
+          upload={imagePath} 
+          url={imageUrl} 
+          option={imageOption}
+          topText={topText}
+          bottomText={bottomText}
         />
       </section>
     );
