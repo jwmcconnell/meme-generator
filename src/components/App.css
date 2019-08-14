@@ -1,0 +1,18 @@
+.App {
+  section {
+    label {
+      display: block;
+
+      input {
+        margin: 5px;
+      }
+    }
+
+    fieldset {
+      display: inline-block;
+      label {
+        display: inline-block;
+      }
+    }
+  } 
+}

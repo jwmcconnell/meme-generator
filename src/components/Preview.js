@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Preview = ({ image }) => {
-  return <img src={image} />;
+const Preview = ({ upload, url, option }) => {
+  return (
+    <img src={option === 'upload' ? upload : url} />
+  );
 };
 
 Preview.propTypes = {
-  image: PropTypes.string.isRequired
+  upload: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  option: PropTypes.string.isRequired
 };
 
 export default Preview;
