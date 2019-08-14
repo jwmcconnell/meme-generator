@@ -1,5 +1,6 @@
 import React from 'react';
 import Preview from './Preview';
+import MemeForm from './MemeForm';
 
 import styles from './App.css';
 
@@ -42,53 +43,14 @@ class App extends React.Component {
     const { topText, bottomText, imagePath, imageOption, imageUrl } = this.state;
     return (
       <section className={styles.App}>
-        <section>
-
-          <label>File Upload:
-            <input type="file" onChange={this.updateFile} />
-          </label>
-
-          <label>URL:
-            <input type="text" onChange={this.updateUrl} />
-          </label>
-
-          <label>Top Text:
-            <input type="text" onChange={this.updateTopText} />
-          </label>
-
-          <label>Bottom Text:
-            <input type="text" onChange={this.updateBottomText} />
-          </label>
-
-          <fieldset>
-            <legend>Image Source</legend>
-
-            <label htmlFor="upload">Upload
-              <input 
-                defaultChecked 
-                required 
-                name="file-source" 
-                value="upload" 
-                type="radio" 
-                id="upload"
-                onChange={this.updateImageOption}
-              />
-            </label>
-
-            <label htmlFor="url">URL
-              <input 
-                required 
-                name="file-source" 
-                value="url" 
-                type="radio" 
-                id="url"
-                onChange={this.updateImageOption}
-              />
-            </label>
-            
-          </fieldset>
-
-        </section>
+        
+        <MemeForm 
+          updateFile={this.updateFile}
+          updateUrl={this.updateUrl}
+          updateImageOption={this.updateImageOption}
+          updateTopText={this.updateTopText}
+          updateBottomText={this.updateBottomText}
+        />
 
         <Preview 
           upload={imagePath} 
@@ -97,6 +59,7 @@ class App extends React.Component {
           topText={topText}
           bottomText={bottomText}
         />
+        
       </section>
     );
   }
