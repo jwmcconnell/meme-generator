@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Preview.css';
 
 const Preview = ({ upload, url, option }) => {
   return (
-    <img src={option === 'upload' ? upload : url} />
+    <section className={styles.Preview}>
+      <img src={option === 'upload' ? upload : url} />
+    </section>
   );
 };
 
