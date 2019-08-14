@@ -1,7 +1,21 @@
 .Preview {
+  position: relative;
   text-align: center;
+  width: 50vw;
+
   img {
-    width: 50vw;
-    margin: 1rem;
+    width: 100%;
+  }
+
+  .topText {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  .bottomText {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
   }
 }

@@ -67,7 +67,9 @@ exports[`App component renders App 1`] = `
     </fieldset>
   </section>
   <Preview
+    bottomText=""
     option="upload"
+    topText=""
     upload=""
     url=""
   />

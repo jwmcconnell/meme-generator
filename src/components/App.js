@@ -89,7 +89,13 @@ class App extends React.Component {
 
         </section>
 
-        <Preview upload={this.state.imagePath} url={this.state.imageUrl} option={this.state.imageOption}/>
+        <Preview 
+          upload={this.state.imagePath} 
+          url={this.state.imageUrl} 
+          option={this.state.imageOption}
+          topText={this.state.topText}
+          bottomText={this.state.bottomText}
+        />
       </section>
     );
   }
