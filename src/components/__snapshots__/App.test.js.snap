@@ -4,70 +4,19 @@ exports[`App component renders App 1`] = `
 <section
   className="App"
 >
-  <section>
-    <label>
-      File Upload:
-      <input
-        onChange={[Function]}
-        type="file"
-      />
-    </label>
-    <label>
-      URL:
-      <input
-        onChange={[Function]}
-        type="text"
-      />
-    </label>
-    <label>
-      Top Text:
-      <input
-        onChange={[Function]}
-        type="text"
-      />
-    </label>
-    <label>
-      Bottom Text:
-      <input
-        onChange={[Function]}
-        type="text"
-      />
-    </label>
-    <fieldset>
-      <legend>
-        Image Source
-      </legend>
-      <label
-        htmlFor="upload"
-      >
-        Upload
-        <input
-          defaultChecked={true}
-          id="upload"
-          name="file-source"
-          onChange={[Function]}
-          required={true}
-          type="radio"
-          value="upload"
-        />
-      </label>
-      <label
-        htmlFor="url"
-      >
-        URL
-        <input
-          id="url"
-          name="file-source"
-          onChange={[Function]}
-          required={true}
-          type="radio"
-          value="url"
-        />
-      </label>
-    </fieldset>
-  </section>
+  <MemeForm
+    updateBottomText={[Function]}
+    updateFile={[Function]}
+    updateFontColor={[Function]}
+    updateFontSize={[Function]}
+    updateImageOption={[Function]}
+    updateTopText={[Function]}
+    updateUrl={[Function]}
+  />
   <Preview
     bottomText=""
+    fontColor="#000000"
+    fontSize={16}
     option="upload"
     topText=""
     upload=""

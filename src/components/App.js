@@ -8,6 +8,8 @@ class App extends React.Component {
   state = {
     topText: '',
     bottomText: '',
+    fontSize: 16,
+    fontColor: '#000000',
     imagePath: '',
     imageUrl: '',
     imageOption: 'upload'
@@ -23,24 +25,17 @@ class App extends React.Component {
     };
   }
 
-  updateUrl = e => {
-    this.setState({ imageUrl: e.target.value });
-  }
+  updateUrl = e => this.setState({ imageUrl: e.target.value });
+  updateImageOption = e => this.setState({ imageOption: e.target.value });
 
-  updateTopText = e => {
-    this.setState({ topText: e.target.value });
-  }
+  updateTopText = e => this.setState({ topText: e.target.value });
+  updateBottomText = e => this.setState({ bottomText: e.target.value });
 
-  updateBottomText = e => {
-    this.setState({ bottomText: e.target.value });
-  }
-
-  updateImageOption = e => {
-    this.setState({ imageOption: e.target.value });
-  }
+  updateFontSize = e => this.setState({ fontSize: parseInt(e.target.value) });
+  updateFontColor = e => this.setState({ fontColor: e.target.value });
   
   render() {
-    const { topText, bottomText, imagePath, imageOption, imageUrl } = this.state;
+    const { topText, bottomText, imagePath, imageOption, imageUrl, fontSize, fontColor } = this.state;
     return (
       <section className={styles.App}>
         
@@ -50,6 +45,8 @@ class App extends React.Component {
           updateImageOption={this.updateImageOption}
           updateTopText={this.updateTopText}
           updateBottomText={this.updateBottomText}
+          updateFontSize={this.updateFontSize}
+          updateFontColor={this.updateFontColor}
         />
 
         <Preview 
@@ -58,8 +55,10 @@ class App extends React.Component {
           option={imageOption}
           topText={topText}
           bottomText={bottomText}
+          fontSize={fontSize}
+          fontColor={fontColor}
         />
-        
+
       </section>
     );
   }
