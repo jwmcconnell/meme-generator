@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MemeForm component renders MemeForm 1`] = `
+<section>
+  <label>
+    File Upload:
+    <input
+      onChange={[Function]}
+      type="file"
+    />
+  </label>
+  <label>
+    URL:
+    <input
+      onChange={[Function]}
+      type="text"
+    />
+  </label>
+  <label>
+    Top Text:
+    <input
+      onChange={[Function]}
+      type="text"
+    />
+  </label>
+  <label>
+    Bottom Text:
+    <input
+      onChange={[Function]}
+      type="text"
+    />
+  </label>
+  <fieldset>
+    <legend>
+      Image Source
+    </legend>
+    <label
+      htmlFor="upload"
+    >
+      Upload
+      <input
+        defaultChecked={true}
+        id="upload"
+        name="file-source"
+        onChange={[Function]}
+        required={true}
+        type="radio"
+        value="upload"
+      />
+    </label>
+    <label
+      htmlFor="url"
+    >
+      URL
+      <input
+        id="url"
+        name="file-source"
+        onChange={[Function]}
+        required={true}
+        type="radio"
+        value="url"
+      />
+    </label>
+  </fieldset>
+  <label>
+    Font Size
+    <input
+      defaultValue="16"
+      min="10"
+      onChange={[Function]}
+      type="number"
+    />
+  </label>
+  <label>
+    Font Color
+    <input
+      defaultValue="#000000"
+      onChange={[Function]}
+      type="color"
+    />
+  </label>
+</section>
+`;

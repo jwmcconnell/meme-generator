@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Preview component renders Preview 1`] = `
+<section
+  className="Preview"
+>
+  <img
+    src=""
+  />
+  <section
+    className="topText"
+    style={
+      Object {
+        "color": "#000000",
+        "fontSize": "16px",
+      }
+    }
+  />
+  <section
+    className="bottomText"
+    style={
+      Object {
+        "color": "#000000",
+        "fontSize": "16px",
+      }
+    }
+  />
+</section>
+`;

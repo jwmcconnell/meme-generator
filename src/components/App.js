@@ -35,7 +35,15 @@ class App extends React.Component {
   updateFontColor = e => this.setState({ fontColor: e.target.value });
   
   render() {
-    const { topText, bottomText, imagePath, imageOption, imageUrl, fontSize, fontColor } = this.state;
+    const { 
+      topText, 
+      bottomText, 
+      imagePath, 
+      imageOption, 
+      imageUrl, 
+      fontSize, 
+      fontColor 
+    } = this.state;
     return (
       <section className={styles.App}>
         
