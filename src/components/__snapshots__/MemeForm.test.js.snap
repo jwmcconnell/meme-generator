@@ -2,50 +2,57 @@
 
 exports[`MemeForm component renders MemeForm 1`] = `
 <section>
-  <li
+  <InputField
     key="File Upload-file-function updateFile(e) {
       return console.log(e.target.value);
     }"
-  >
-    <InputField
-      label="File Upload"
-      type="file"
-      update={[Function]}
-    />
-  </li>
-  <li
+    label="File Upload"
+    type="file"
+    update={[Function]}
+  />
+  <InputField
     key="URL-text-function updateUrl(e) {
       return console.log(e.target.value);
     }"
-  >
-    <InputField
-      label="URL"
-      type="text"
-      update={[Function]}
-    />
-  </li>
-  <li
+    label="URL"
+    type="text"
+    update={[Function]}
+  />
+  <InputField
     key="Top Text-text-function updateTopText(e) {
       return console.log(e.target.value);
     }"
-  >
-    <InputField
-      label="Top Text"
-      type="text"
-      update={[Function]}
-    />
-  </li>
-  <li
+    label="Top Text"
+    type="text"
+    update={[Function]}
+  />
+  <InputField
     key="Bottom Text-text-function updateBottomText(e) {
       return console.log(e.target.value);
     }"
-  >
-    <InputField
-      label="Bottom Text"
-      type="text"
-      update={[Function]}
-    />
-  </li>
+    label="Bottom Text"
+    type="text"
+    update={[Function]}
+  />
+  <InputField
+    defaultValue="26"
+    key="Font Size-number-function updateFontSize(e) {
+      return console.log(e.target.value);
+    }"
+    label="Font Size"
+    min="10"
+    type="number"
+    update={[Function]}
+  />
+  <InputField
+    defaultValue="#FFFFFF"
+    key="Font Color-color-function updateFontColor(e) {
+      return console.log(e.target.value);
+    }"
+    label="Font Color"
+    type="color"
+    update={[Function]}
+  />
   <fieldset>
     <legend>
       Image Source
@@ -78,22 +85,5 @@ exports[`MemeForm component renders MemeForm 1`] = `
       />
     </label>
   </fieldset>
-  <label>
-    Font Size
-    <input
-      defaultValue="26"
-      min="10"
-      onChange={[Function]}
-      type="number"
-    />
-  </label>
-  <label>
-    Font Color
-    <input
-      defaultValue="#FFFFFF"
-      onChange={[Function]}
-      type="color"
-    />
-  </label>
 </section>
 `;
