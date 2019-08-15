@@ -5,13 +5,8 @@ exports[`App component renders App 1`] = `
   className="App"
 >
   <MemeForm
-    updateBottomText={[Function]}
+    handleUpdate={[Function]}
     updateFile={[Function]}
-    updateFontColor={[Function]}
-    updateFontSize={[Function]}
-    updateImageOption={[Function]}
-    updateTopText={[Function]}
-    updateUrl={[Function]}
   />
   <Preview
     bottomText=""

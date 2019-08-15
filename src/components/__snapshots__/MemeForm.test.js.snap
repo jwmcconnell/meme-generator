@@ -11,45 +11,50 @@ exports[`MemeForm component renders MemeForm 1`] = `
     update={[Function]}
   />
   <InputField
-    key="URL-text-function updateUrl(e) {
+    key="URL-text-function handleUpdate(e) {
       return console.log(e.target.value);
     }"
     label="URL"
+    name="imageUrl"
     type="text"
     update={[Function]}
   />
   <InputField
-    key="Top Text-text-function updateTopText(e) {
+    key="Top Text-text-function handleUpdate(e) {
       return console.log(e.target.value);
     }"
     label="Top Text"
+    name="topText"
     type="text"
     update={[Function]}
   />
   <InputField
-    key="Bottom Text-text-function updateBottomText(e) {
+    key="Bottom Text-text-function handleUpdate(e) {
       return console.log(e.target.value);
     }"
     label="Bottom Text"
+    name="bottomText"
     type="text"
     update={[Function]}
   />
   <InputField
     defaultValue="26"
-    key="Font Size-number-function updateFontSize(e) {
+    key="Font Size-number-function handleUpdate(e) {
       return console.log(e.target.value);
     }"
     label="Font Size"
     min="10"
+    name="fontSize"
     type="number"
     update={[Function]}
   />
   <InputField
     defaultValue="#FFFFFF"
-    key="Font Color-color-function updateFontColor(e) {
+    key="Font Color-color-function handleUpdate(e) {
       return console.log(e.target.value);
     }"
     label="Font Color"
+    name="fontColor"
     type="color"
     update={[Function]}
   />
@@ -64,7 +69,7 @@ exports[`MemeForm component renders MemeForm 1`] = `
       <input
         defaultChecked={true}
         id="upload"
-        name="file-source"
+        name="imageOption"
         onChange={[Function]}
         required={true}
         type="radio"
@@ -77,7 +82,7 @@ exports[`MemeForm component renders MemeForm 1`] = `
       URL
       <input
         id="url"
-        name="file-source"
+        name="imageOption"
         onChange={[Function]}
         required={true}
         type="radio"

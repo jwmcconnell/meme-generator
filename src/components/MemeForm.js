@@ -4,29 +4,25 @@ import PropTypes from 'prop-types';
 import InputField from './InputField';
 
 const MemeForm = ({ 
-  updateFile, 
-  updateUrl, 
-  updateTopText, 
-  updateBottomText, 
-  updateImageOption,
-  updateFontSize,
-  updateFontColor
+  updateFile,
+  handleUpdate
 }) => {
 
   const fieldsInfo = [
     { label: 'File Upload', type: 'file', update: updateFile },
-    { label: 'URL', type: 'text', update: updateUrl },
-    { label: 'Top Text', type: 'text', update: updateTopText },
-    { label: 'Bottom Text', type: 'text', update: updateBottomText },
-    { label: 'Font Size', type: 'number', update: updateFontSize, min: '10', defaultValue: '26' },
-    { label: 'Font Color', type: 'color', update: updateFontColor, defaultValue: '#FFFFFF' },
+    { label: 'URL', name: 'imageUrl', type: 'text', update: handleUpdate },
+    { label: 'Top Text', name: 'topText', type: 'text', update: handleUpdate },
+    { label: 'Bottom Text', name: 'bottomText', type: 'text', update: handleUpdate },
+    { label: 'Font Size', name: 'fontSize', type: 'number', update: handleUpdate, min: '10', defaultValue: '26' },
+    { label: 'Font Color', name: 'fontColor', type: 'color', update: handleUpdate, defaultValue: '#FFFFFF' },
   ];
 
-  const fields = fieldsInfo.map(({ label, type, update, min, defaultValue }) => (
+  const fields = fieldsInfo.map(({ label, name, type, update, min, defaultValue }) => (
     <InputField 
       label={label} 
       type={type} 
       update={update} 
+      name={name}
       min={min}
       defaultValue={defaultValue}
       key={`${label}-${type}-${update}`}
@@ -36,7 +32,7 @@ const MemeForm = ({
   return (
     <section>
       {fields}
-      
+
       <fieldset>
         <legend>Image Source</legend>
 
@@ -44,22 +40,22 @@ const MemeForm = ({
           <input 
             defaultChecked 
             required 
-            name="file-source" 
+            name="imageOption" 
             value="upload" 
             type="radio" 
             id="upload"
-            onChange={updateImageOption}
+            onChange={handleUpdate}
           />
         </label>
 
         <label htmlFor="url">URL
           <input 
             required 
-            name="file-source" 
+            name="imageOption" 
             value="url" 
             type="radio" 
             id="url"
-            onChange={updateImageOption}
+            onChange={handleUpdate}
           />
         </label>
             
@@ -70,12 +66,7 @@ const MemeForm = ({
 
 MemeForm.propTypes = {
   updateFile: PropTypes.func.isRequired,
-  updateUrl: PropTypes.func.isRequired,
-  updateTopText: PropTypes.func.isRequired,
-  updateBottomText: PropTypes.func.isRequired,
-  updateImageOption: PropTypes.func.isRequired,
-  updateFontSize: PropTypes.func.isRequired,
-  updateFontColor: PropTypes.func.isRequired
+  handleUpdate: PropTypes.func.isRequired
 };
 
 

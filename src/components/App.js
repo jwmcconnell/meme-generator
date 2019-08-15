@@ -29,14 +29,7 @@ class App extends React.Component {
     };
   }
 
-  updateUrl = e => this.setState({ imageUrl: e.target.value });
-  updateImageOption = e => this.setState({ imageOption: e.target.value });
-
-  updateTopText = e => this.setState({ topText: e.target.value });
-  updateBottomText = e => this.setState({ bottomText: e.target.value });
-
-  updateFontSize = e => this.setState({ fontSize: parseInt(e.target.value) });
-  updateFontColor = e => this.setState({ fontColor: e.target.value });
+  handleUpdate = (e) => this.setState({ [e.target.name]: e.target.value });
 
   downloadMeme = () => {
     let node = document.getElementById('preview');
@@ -68,12 +61,7 @@ class App extends React.Component {
         
         <MemeForm 
           updateFile={this.updateFile}
-          updateUrl={this.updateUrl}
-          updateImageOption={this.updateImageOption}
-          updateTopText={this.updateTopText}
-          updateBottomText={this.updateBottomText}
-          updateFontSize={this.updateFontSize}
-          updateFontColor={this.updateFontColor}
+          handleUpdate={this.handleUpdate}
         />
 
         <Preview 
