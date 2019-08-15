@@ -7,7 +7,7 @@ describe('Preview component', () => {
     const state = {
       topText: '',
       bottomText: '',
-      fontSize: 16,
+      fontSize: '26',
       fontColor: '#000000',
       imagePath: '',
       imageUrl: '',

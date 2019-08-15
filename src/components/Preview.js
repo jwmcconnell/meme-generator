@@ -23,7 +23,7 @@ Preview.propTypes = {
   option: PropTypes.string.isRequired,
   topText: PropTypes.string.isRequired,
   bottomText: PropTypes.string.isRequired,
-  fontSize: PropTypes.number.isRequired,
+  fontSize: PropTypes.string.isRequired,
   fontColor: PropTypes.string.isRequired
 };
 

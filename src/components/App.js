@@ -12,7 +12,7 @@ class App extends React.Component {
   state = {
     topText: '',
     bottomText: '',
-    fontSize: 26,
+    fontSize: '26',
     fontColor: '#FFFFFF',
     imagePath: '',
     imageUrl: '',
