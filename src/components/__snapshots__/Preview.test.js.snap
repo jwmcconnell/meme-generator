@@ -1,32 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Preview component renders Preview 1`] = `
-<section
-  className="Preview"
-  id="preview"
->
-  <img
-    src=""
-  />
-  <section
-    className="topText"
-    style={
-      Object {
-        "color": "#000000",
-        "fontFamily": "Roboto",
-        "fontSize": "26px",
-      }
-    }
-  />
-  <section
-    className="bottomText"
-    style={
-      Object {
-        "color": "#000000",
-        "fontFamily": "Roboto",
-        "fontSize": "26px",
-      }
-    }
-  />
-</section>
-`;
+exports[`Preview component renders Preview 1`] = `<Fragment />`;
