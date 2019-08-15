@@ -18,17 +18,25 @@ const MemeForm = ({
     { label: 'URL', type: 'text', update: updateUrl },
     { label: 'Top Text', type: 'text', update: updateTopText },
     { label: 'Bottom Text', type: 'text', update: updateBottomText },
+    { label: 'Font Size', type: 'number', update: updateFontSize, min: '10', defaultValue: '26' },
+    { label: 'Font Color', type: 'color', update: updateFontColor, defaultValue: '#FFFFFF' },
   ];
 
-  const fields = fieldsInfo.map(({ label, type, update }) => (
-    <li key={`${label}-${type}-${update}`}>
-      <InputField label={label} type={type} update={update} />
-    </li>
+  const fields = fieldsInfo.map(({ label, type, update, min, defaultValue }) => (
+    <InputField 
+      label={label} 
+      type={type} 
+      update={update} 
+      min={min}
+      defaultValue={defaultValue}
+      key={`${label}-${type}-${update}`}
+    />
   ));
   
   return (
     <section>
       {fields}
+      
       <fieldset>
         <legend>Image Source</legend>
 
@@ -56,15 +64,6 @@ const MemeForm = ({
         </label>
             
       </fieldset>
-
-      <label>Font Size
-        <input type="number" min="10" defaultValue="26" onChange={updateFontSize}/>
-      </label>
-
-      <label>Font Color
-        <input type="color" defaultValue='#FFFFFF' onChange={updateFontColor}/>
-      </label>
-
     </section>
   );
 };
