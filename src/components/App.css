@@ -4,6 +4,10 @@
     label {
       display: block;
       margin: .5rem;
+
+      input, select {
+        margin-left: 5px;
+      }
     }
 
     fieldset {

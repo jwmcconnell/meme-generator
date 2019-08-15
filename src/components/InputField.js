@@ -17,7 +17,7 @@ const InputField = ({ label, name, type, update, defaultValue, min }) => {
 
 InputField.propTypes = {
   label: PropTypes.string.isRequired,
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   update: PropTypes.func.isRequired,
   defaultValue: PropTypes.string,

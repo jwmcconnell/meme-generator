@@ -6,7 +6,7 @@ import InputField from './InputField';
 const MemeForm = ({ updateFile, handleUpdate }) => {
 
   const fieldsInfo = [
-    { label: 'File Upload', type: 'file', update: updateFile },
+    { label: 'File Upload', name: 'fileUpload', type: 'file', update: updateFile },
     { label: 'URL', name: 'imageUrl', type: 'text', update: handleUpdate },
     { label: 'Top Text', name: 'topText', type: 'text', update: handleUpdate },
     { label: 'Bottom Text', name: 'bottomText', type: 'text', update: handleUpdate },
