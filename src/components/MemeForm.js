@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import InputField from './InputField';
+
 const MemeForm = ({ 
   updateFile, 
   updateUrl, 
@@ -10,25 +12,23 @@ const MemeForm = ({
   updateFontSize,
   updateFontColor
 }) => {
+
+  const fieldsInfo = [
+    { label: 'File Upload', type: 'file', update: updateFile },
+    { label: 'URL', type: 'text', update: updateUrl },
+    { label: 'Top Text', type: 'text', update: updateTopText },
+    { label: 'Bottom Text', type: 'text', update: updateBottomText },
+  ];
+
+  const fields = fieldsInfo.map(({ label, type, update }) => (
+    <li key={`${label}-${type}-${update}`}>
+      <InputField label={label} type={type} update={update} />
+    </li>
+  ));
+  
   return (
     <section>
-
-      <label>File Upload:
-        <input type="file" onChange={updateFile} />
-      </label>
-
-      <label>URL:
-        <input type="text" onChange={updateUrl} />
-      </label>
-
-      <label>Top Text:
-        <input type="text" onChange={updateTopText} />
-      </label>
-
-      <label>Bottom Text:
-        <input type="text" onChange={updateBottomText} />
-      </label>
-
+      {fields}
       <fieldset>
         <legend>Image Source</legend>
 

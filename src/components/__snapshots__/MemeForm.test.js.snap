@@ -2,34 +2,50 @@
 
 exports[`MemeForm component renders MemeForm 1`] = `
 <section>
-  <label>
-    File Upload:
-    <input
-      onChange={[Function]}
+  <li
+    key="File Upload-file-function updateFile(e) {
+      return console.log(e.target.value);
+    }"
+  >
+    <InputField
+      label="File Upload"
       type="file"
+      update={[Function]}
     />
-  </label>
-  <label>
-    URL:
-    <input
-      onChange={[Function]}
+  </li>
+  <li
+    key="URL-text-function updateUrl(e) {
+      return console.log(e.target.value);
+    }"
+  >
+    <InputField
+      label="URL"
       type="text"
+      update={[Function]}
     />
-  </label>
-  <label>
-    Top Text:
-    <input
-      onChange={[Function]}
+  </li>
+  <li
+    key="Top Text-text-function updateTopText(e) {
+      return console.log(e.target.value);
+    }"
+  >
+    <InputField
+      label="Top Text"
       type="text"
+      update={[Function]}
     />
-  </label>
-  <label>
-    Bottom Text:
-    <input
-      onChange={[Function]}
+  </li>
+  <li
+    key="Bottom Text-text-function updateBottomText(e) {
+      return console.log(e.target.value);
+    }"
+  >
+    <InputField
+      label="Bottom Text"
       type="text"
+      update={[Function]}
     />
-  </label>
+  </li>
   <fieldset>
     <legend>
       Image Source
