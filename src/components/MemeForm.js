@@ -3,10 +3,7 @@ import PropTypes from 'prop-types';
 
 import InputField from './InputField';
 
-const MemeForm = ({ 
-  updateFile,
-  handleUpdate
-}) => {
+const MemeForm = ({ updateFile, handleUpdate }) => {
 
   const fieldsInfo = [
     { label: 'File Upload', type: 'file', update: updateFile },
