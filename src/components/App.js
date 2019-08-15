@@ -45,7 +45,6 @@ class App extends React.Component {
       .then(function(dataUrl) {
         let img = new Image();
         img.src = dataUrl;
-        document.body.appendChild(img);
         FileSaver.saveAs(img.src, 'generated-meme.png');
       })
       .catch(function(error) {
