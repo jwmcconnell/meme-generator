@@ -15,8 +15,8 @@ exports[`App component renders App 1`] = `
   />
   <Preview
     bottomText=""
-    fontColor="#000000"
-    fontSize={16}
+    fontColor="#FFFFFF"
+    fontSize={26}
     option="upload"
     topText=""
     upload=""

@@ -58,11 +58,11 @@ const MemeForm = ({
       </fieldset>
 
       <label>Font Size
-        <input type="number" min="10" defaultValue="16" onChange={updateFontSize}/>
+        <input type="number" min="10" defaultValue="26" onChange={updateFontSize}/>
       </label>
 
       <label>Font Color
-        <input type="color" defaultValue='#000000' onChange={updateFontColor}/>
+        <input type="color" defaultValue='#FFFFFF' onChange={updateFontColor}/>
       </label>
 
     </section>

@@ -65,7 +65,7 @@ exports[`MemeForm component renders MemeForm 1`] = `
   <label>
     Font Size
     <input
-      defaultValue="16"
+      defaultValue="26"
       min="10"
       onChange={[Function]}
       type="number"
@@ -74,7 +74,7 @@ exports[`MemeForm component renders MemeForm 1`] = `
   <label>
     Font Color
     <input
-      defaultValue="#000000"
+      defaultValue="#FFFFFF"
       onChange={[Function]}
       type="color"
     />

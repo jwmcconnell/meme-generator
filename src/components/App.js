@@ -12,8 +12,8 @@ class App extends React.Component {
   state = {
     topText: '',
     bottomText: '',
-    fontSize: 16,
-    fontColor: '#000000',
+    fontSize: 26,
+    fontColor: '#FFFFFF',
     imagePath: '',
     imageUrl: '',
     imageOption: 'upload'
@@ -38,17 +38,18 @@ class App extends React.Component {
   updateFontSize = e => this.setState({ fontSize: parseInt(e.target.value) });
   updateFontColor = e => this.setState({ fontColor: e.target.value });
 
-  downloadMeme = e => {
-    console.log('Downloading meme');
+  downloadMeme = () => {
     let node = document.getElementById('preview');
  
     domtoimage.toPng(node)
       .then(function(dataUrl) {
         let img = new Image();
         img.src = dataUrl;
+        document.body.appendChild(img);
         FileSaver.saveAs(img.src, 'generated-meme.png');
       })
       .catch(function(error) {
+        // eslint-disable-next-line no-console
         console.error('oops, something went wrong!', error);
       });
   }
