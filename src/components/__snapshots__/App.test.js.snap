@@ -22,5 +22,8 @@ exports[`App component renders App 1`] = `
     upload=""
     url=""
   />
+  <Download
+    downloadMeme={[Function]}
+  />
 </section>
 `;

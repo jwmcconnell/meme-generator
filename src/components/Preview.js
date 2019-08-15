@@ -9,7 +9,7 @@ const Preview = ({ upload, url, option, topText, bottomText, fontSize, fontColor
   };
   
   return (
-    <section className={styles.Preview}>
+    <section className={styles.Preview} id="preview">
       <img src={option === 'upload' ? upload : url} />
       <section className={styles.topText} style={textStyle}>{topText}</section>
       <section className={styles.bottomText} style={textStyle}>{bottomText}</section>

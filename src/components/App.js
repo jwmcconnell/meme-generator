@@ -1,6 +1,10 @@
 import React from 'react';
+import domtoimage from 'dom-to-image';
+import FileSaver from 'file-saver';
+
 import Preview from './Preview';
 import MemeForm from './MemeForm';
+import Download from './Download';
 
 import styles from './App.css';
 
@@ -33,6 +37,21 @@ class App extends React.Component {
 
   updateFontSize = e => this.setState({ fontSize: parseInt(e.target.value) });
   updateFontColor = e => this.setState({ fontColor: e.target.value });
+
+  downloadMeme = e => {
+    console.log('Downloading meme');
+    let node = document.getElementById('preview');
+ 
+    domtoimage.toPng(node)
+      .then(function(dataUrl) {
+        let img = new Image();
+        img.src = dataUrl;
+        FileSaver.saveAs(img.src, 'generated-meme.png');
+      })
+      .catch(function(error) {
+        console.error('oops, something went wrong!', error);
+      });
+  }
   
   render() {
     const { 
@@ -66,6 +85,8 @@ class App extends React.Component {
           fontSize={fontSize}
           fontColor={fontColor}
         />
+
+        <Download downloadMeme={this.downloadMeme} />
 
       </section>
     );

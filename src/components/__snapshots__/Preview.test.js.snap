@@ -3,6 +3,7 @@
 exports[`Preview component renders Preview 1`] = `
 <section
   className="Preview"
+  id="preview"
 >
   <img
     src=""
