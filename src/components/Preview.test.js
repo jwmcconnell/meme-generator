@@ -9,6 +9,7 @@ describe('Preview component', () => {
       bottomText: '',
       fontSize: '26',
       fontColor: '#000000',
+      fontFamily: 'Roboto',
       imagePath: '',
       imageUrl: '',
       imageOption: 'upload'
@@ -22,6 +23,7 @@ describe('Preview component', () => {
         bottomText={state.bottomText}
         fontSize={state.fontSize}
         fontColor={state.fontColor}
+        fontFamily={state.fontFamily}
       />
     );
     expect(wrapper).toMatchSnapshot();

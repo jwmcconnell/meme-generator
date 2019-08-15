@@ -1,11 +1,9 @@
 .App {
+  font-family: 'Roboto', sans-serif;
   section {
     label {
       display: block;
-
-      input {
-        margin: 5px;
-      }
+      margin: .5rem;
     }
 
     fieldset {

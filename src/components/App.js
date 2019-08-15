@@ -14,6 +14,7 @@ class App extends React.Component {
     bottomText: '',
     fontSize: '26',
     fontColor: '#FFFFFF',
+    fontFamily: 'Roboto',
     imagePath: '',
     imageUrl: '',
     imageOption: 'upload'
@@ -54,7 +55,8 @@ class App extends React.Component {
       imageOption, 
       imageUrl, 
       fontSize, 
-      fontColor 
+      fontColor,
+      fontFamily
     } = this.state;
     return (
       <section className={styles.App}>
@@ -72,6 +74,7 @@ class App extends React.Component {
           bottomText={bottomText}
           fontSize={fontSize}
           fontColor={fontColor}
+          fontFamily={fontFamily}
         />
 
         <Download downloadMeme={this.downloadMeme} />

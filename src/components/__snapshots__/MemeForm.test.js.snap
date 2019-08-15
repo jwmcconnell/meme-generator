@@ -58,6 +58,48 @@ exports[`MemeForm component renders MemeForm 1`] = `
     type="color"
     update={[Function]}
   />
+  <label
+    htmlFor="fontFamily"
+    style={
+      Object {
+        "marginTop": ".8rem",
+      }
+    }
+  >
+    Font:
+    <select
+      id="fontFamily"
+      name="fontFamily"
+      onChange={[Function]}
+    >
+      <option
+        defaultValue={true}
+        value="Roboto"
+      >
+        Roboto
+      </option>
+      <option
+        value="Arial"
+      >
+        Arial
+      </option>
+      <option
+        value="Courier"
+      >
+        Courier
+      </option>
+      <option
+        value="Times"
+      >
+        Times
+      </option>
+      <option
+        value="Helvetica"
+      >
+        Helvetica
+      </option>
+    </select>
+  </label>
   <fieldset>
     <legend>
       Image Source

@@ -30,6 +30,16 @@ const MemeForm = ({ updateFile, handleUpdate }) => {
     <section>
       {fields}
 
+      <label htmlFor="fontFamily" style={{ marginTop: '.8rem' }}>Font: 
+        <select id="fontFamily" name="fontFamily" onChange={handleUpdate}>
+          <option value="Roboto" defaultValue >Roboto</option>
+          <option value="Arial">Arial</option>
+          <option value="Courier">Courier</option>
+          <option value="Times">Times</option>
+          <option value="Helvetica">Helvetica</option>
+        </select>
+      </label>
+
       <fieldset>
         <legend>Image Source</legend>
 

@@ -13,6 +13,7 @@ exports[`Preview component renders Preview 1`] = `
     style={
       Object {
         "color": "#000000",
+        "fontFamily": "Roboto",
         "fontSize": "26px",
       }
     }
@@ -22,6 +23,7 @@ exports[`Preview component renders Preview 1`] = `
     style={
       Object {
         "color": "#000000",
+        "fontFamily": "Roboto",
         "fontSize": "26px",
       }
     }
