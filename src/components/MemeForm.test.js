@@ -6,7 +6,6 @@ describe('MemeForm component', () => {
   it('renders MemeForm', () => {
     
     const updateFile = e => console.log(e.target.value);
-  
     const updateUrl = e => console.log(e.target.value);
     const updateImageOption = e => console.log(e.target.value);
   
