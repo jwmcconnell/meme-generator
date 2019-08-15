@@ -8,6 +8,10 @@ const Preview = ({ upload, url, option, topText, bottomText, fontSize, fontColor
     fontFamily: fontFamily,
     color: fontColor
   };
+
+  if(option === 'url' && url === '' || option === 'upload' && upload === '') {
+    return <></>;
+  }
   
   return (
     <section className={styles.Preview} id="preview">
