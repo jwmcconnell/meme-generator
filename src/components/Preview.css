@@ -1,0 +1,35 @@
+.Preview {
+  position: relative;
+  text-align: center;
+  width: 50vw;
+
+  img {
+    width: 100%;
+  }
+
+  .topText {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    left: 10px;
+    top: 10px;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+  }
+
+  .bottomText {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 10px;
+    left: 10px;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+  }
+}

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputField component renders InputField 1`] = `
+<label>
+  someLabel
+  <input
+    name="someName"
+    onChange={[Function]}
+    type="text"
+  />
+</label>
+`;

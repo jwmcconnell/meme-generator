@@ -1,0 +1,21 @@
+.App {
+  font-family: 'Roboto', sans-serif;
+  section {
+    label {
+      display: block;
+      margin: .5rem;
+
+      input, select {
+        margin-left: 5px;
+      }
+    }
+
+    fieldset {
+      display: inline-block;
+      margin: 5px;
+      label {
+        display: inline-block;
+      }
+    }
+  } 
+}
